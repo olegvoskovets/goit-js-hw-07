@@ -4,7 +4,7 @@ const palettContainer = document.querySelector(".gallery");
 const cardsImg = createGalleryImgMarkup(galleryItems);
 
 palettContainer.insertAdjacentHTML("beforeend", cardsImg);
-palettContainer.addEventListener("click", onPalettContainerClick);
+// palettContainer.addEventListener("click", onPalettContainerClick);
 
 function createGalleryImgMarkup(gallery) {
   return gallery
@@ -24,13 +24,13 @@ function createGalleryImgMarkup(gallery) {
     })
     .join("");
 }
-// captionDelay = "250"
-function onPalettContainerClick(e) {
-  e.preventDefault();
-  if (!e.target.classList.contains("gallery__image")) {
-    return;
-  }
-  var lightbox = new SimpleLightbox(".gallery a", {
-    /* options */ captionDelay: "250",
-  });
-}
+
+// function onPalettContainerClick(e) {
+//   e.preventDefault();
+//   if (!e.target.classList.contains("gallery__image")) {
+//     return;
+//   }
+// }
+var lightbox = new SimpleLightbox(".gallery a", {
+  captionDelay: "250",
+});
